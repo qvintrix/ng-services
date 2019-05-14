@@ -1,0 +1,23 @@
+<div class="container">
+    <app-add-todo
+      [showTodos]="showTodos"
+    ></app-add-todo>
+  <hr>
+
+  <button (click)="toggleShowTodosStatus()"
+          class="btn btn-warning mb-3">
+    Hide/show todos
+  </button>
+
+  <div class="row" *ngIf="showTodos">
+    <div class="col-12" *ngFor="let todo of todos; let i = index">
+      <app-todo [todo]="todo" [id]="i"></app-todo>
+    </div>
+  </div>
+
+  <ng-template [ngIf]="!showTodos">
+    <h3>
+      You have nothing to do :(
+    </h3>
+  </ng-template>
+</div>

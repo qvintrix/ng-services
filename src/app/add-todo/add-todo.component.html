@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-12">
+    <!--<h3 [ngClass]="{'warning': !showTodos}">Add new TODO</h3>-->
+    <h3 class="mt-4" [class.warning]="!showTodos">Add new TODO</h3>
+    <label>Title</label>
+    <input type="text" class="form-control" [(ngModel)]="title">
+    <label>Description</label>
+    <input type="text" class="form-control" [(ngModel)]="description">
+    <br>
+    <button (click)="onAddTodo()"
+            class="btn btn-primary">
+      Add TODO
+    </button>
+  </div>
+</div>
+

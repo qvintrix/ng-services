@@ -1,0 +1,9 @@
+<div class="card mb-2">
+  <div class="card-body">
+    <h5 class="card-title"><span> {{ id + 1 }}. </span> {{ todo.title }}</h5>
+    <p class="card-text">{{ todo.description }}</p>
+    <div class="text-right">
+      <button class="btn btn-outline-danger" (click)="onRemoveTodo()">Remove</button>
+    </div>
+  </div>
+</div>
